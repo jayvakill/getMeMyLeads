@@ -1,0 +1,11 @@
+[Unit]
+Description=Run getMeMyLeads daily at 7:00 AM
+
+[Timer]
+# Fire at 7 AM every day
+OnCalendar=*-*-* 07:00:00
+# If the machine was off at 7 AM, run as soon as it comes back up
+Persistent=true
+
+[Install]
+WantedBy=timers.target

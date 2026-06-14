@@ -164,3 +164,37 @@ All AI variants resolve to `"AI"`. No `"Ai"` or `"ai"` entries in output.
 | Runs reliably end-to-end | **Yes** |
 
 **Overall: Yes** — MVP is complete and validated. All 8 required follow-ups addressed. 116 leads exported with correct priority tiers, normalized categories, and full field completeness (one known blank company_name row, Low priority, documented).
+
+---
+
+## Daily Automation and GitHub Push Validation
+
+**Validation run date:** 2026-06-13  
+**Script:** `scripts/run_daily.sh`
+
+| Check | Status | Detail |
+|-------|--------|--------|
+| Daily runner script created | **Yes** | `scripts/run_daily.sh` — executable, `set -euo pipefail` |
+| `results/` folder created | **Yes** | `results/startup_signal_dump_YYYY-MM-DD.csv` |
+| New dated file generated | **Yes** | `results/startup_signal_dump_2026-06-13.csv` (118 records) |
+| Previous results preserved | **Yes** | Files are date-named; script skips copy if file already exists |
+| GitHub push tested | **Yes** | Committed and pushed to `origin/main` successfully |
+| systemd timer configured | **Yes** | `deployment/getmymyleads.service` + `deployment/getmymyleads.timer` |
+| Logs verified | **Yes** | `data/logs/daily_runner_2026-06-13.log` and `run_2026-06-13.log` written |
+| Idempotency on same-day re-run | **Yes** | Script detects no new git changes and exits cleanly |
+| Only result CSV committed (no DB, no cache) | **Yes** | `.gitignore` excludes `data/startup_signals.db` and `__pycache__` |
+
+### Run output summary
+
+```
+[21:06:32] Daily runner started: 2026-06-13
+[21:12:45] Export verified: data/exports/startup_signal_dump_2026-06-13.csv (118 records)
+[21:12:45] Copied → results/startup_signal_dump_2026-06-13.csv
+[21:12:45] Committed: Add startup signal dump 2026-06-13
+[21:12:47] Pushed to origin/main.
+[21:12:47] Done. 118 records in results/startup_signal_dump_2026-06-13.csv
+```
+
+### Known issues
+
+- **None.** The runner handles all failure cases: scraper exit codes, missing export file, git push failures. Each is logged and exits with a non-zero code.

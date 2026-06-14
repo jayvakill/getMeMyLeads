@@ -1,0 +1,92 @@
+[21:06:32] ============================================================
+[21:06:32] Daily runner started: 2026-06-13
+[21:06:32] Project dir: /home/yourmom/getMeMyLeads
+[21:06:32] ============================================================
+[21:06:32] Running scraper (app/main.py)...
+21:06:32 [INFO] ============================================================
+21:06:32 [INFO] Daily run started: 2026-06-13
+21:06:32 [INFO] ============================================================
+21:06:32 [INFO] Loaded 18 funding queries, 16 hiring queries, 20 job titles
+21:06:32 [INFO] --- Source: TechCrunch RSS ---
+21:06:34 [INFO] TechCrunch RSS: 2 funding items
+21:06:40 [INFO] --- Source: Bing News RSS (funding) ---
+21:06:45 [INFO] Bing News 'raises Seed round" "AI startup': 6 results
+21:07:14 [INFO] Bing News 'raises Series A" "B2B SaaS': 3 results
+21:07:29 [INFO] Bing News 'announces Seed funding" "SaaS': 3 results
+21:07:43 [INFO] Bing News 'raises Series A" "cybersecurity startup': 4 results
+21:08:02 [INFO] Bing News 'raises Seed funding" "DevOps': 5 results
+21:08:22 [INFO] Bing News 'raises Series A" "data platform': 6 results
+21:08:39 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/gridcare-raises-64m-in-series-a-fundi
+21:08:44 [INFO] Bing News 'AI startup raises Seed funding': 6 results
+21:09:08 [INFO] Bing News 'B2B SaaS startup raises Series A': 0 results
+21:09:12 [INFO] Bing News 'automation startup raises seed funding': 6 results
+21:09:30 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/neuromorphic-compute-startup-unconven
+21:09:34 [WARNING] Blocked (403): https://www.moneycontrol.com/news/business/funding/deeptech-robotics-startup-arm
+21:09:37 [INFO] Bing News 'cloud startup raises Series A': 4 results
+21:09:45 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/ai-cloud-startup-nava-raises-22m-in-s
+21:09:54 [INFO] Bing News 'raises Seed" "fintech': 6 results
+21:09:59 [ERROR] Failed https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html: 404 Client Error: Not Found for url: https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html
+21:10:08 [WARNING] Blocked (403): https://www.finextra.com/newsarticle/47876/egyptian-pos-financing-fintech-blnk-r
+21:10:14 [INFO] Bing News 'raises Series A" "healthtech': 3 results
+21:10:28 [INFO] Bing News 'raises Seed" "HR tech': 1 results
+21:10:35 [INFO] Bing News 'raises Series A" "infrastructure': 4 results
+21:10:50 [INFO] Bing News 'raises Seed funding" "vertical SaaS': 3 results
+21:11:03 [INFO] Bing News 'raises Series A" "API': 0 results
+21:11:06 [INFO] Bing News 'raises Seed" "analytics platform': 3 results
+21:11:20 [INFO] Bing News 'raises Series A" "developer tools': 1 results
+21:11:23 [INFO] --- Source: YC Work at a Startup ---
+21:11:25 [INFO] YC Jobs 'Content Marketer': 22 listings
+21:11:27 [INFO] YC Jobs 'Head of Content': 24 listings
+21:11:30 [INFO] YC Jobs 'Content Lead': 28 listings
+21:11:32 [INFO] YC Jobs 'Social Media Manager': 28 listings
+21:11:35 [INFO] YC Jobs 'Videographer': 29 listings
+21:11:38 [INFO] YC Jobs 'Video Editor': 24 listings
+21:11:41 [INFO] YC Jobs 'Creative Strategist': 26 listings
+21:11:44 [INFO] YC Jobs 'Growth Marketer': 26 listings
+21:11:45 [INFO] YC Jobs 'VP Growth': 24 listings
+21:11:48 [INFO] YC Jobs 'Demand Gen Manager': 25 listings
+21:11:50 [INFO] YC Jobs 'Marketing Manager': 24 listings
+21:11:52 [INFO] YC Jobs 'Head of Marketing': 22 listings
+21:11:55 [INFO] YC Jobs 'CMO': 25 listings
+21:11:57 [INFO] YC Jobs 'Brand Marketing': 22 listings
+21:11:58 [INFO] YC Jobs 'Founder Brand': 25 listings
+21:12:01 [INFO] YC Jobs 'Content Marketing Manager': 24 listings
+21:12:04 [INFO] YC Jobs 'Director of Content': 27 listings
+21:12:06 [INFO] YC Jobs 'Digital Marketing Manager': 25 listings
+21:12:06 [INFO] --- Source: HN Jobs ---
+21:12:09 [INFO] HN Jobs: 30 listings
+21:12:09 [INFO] --- Source: Remote OK ---
+21:12:10 [INFO] Remote OK: 100 total jobs
+21:12:10 [INFO] --- Source: Bing News RSS (hiring) ---
+21:12:15 [INFO] Bing News 'Content Marketer" "Seed" "SaaS': 4 results
+21:12:19 [INFO] Bing News 'Head of Content" "Series A" "AI startup': 1 results
+21:12:23 [INFO] Bing News 'Videographer" "SaaS startup': 0 results
+21:12:28 [INFO] Bing News 'Growth Marketer" "B2B SaaS': 4 results
+21:12:32 [INFO] Bing News 'Creative Strategist" "startup': 1 results
+21:12:36 [INFO] Bing News 'Demand Gen Manager" "Series A" "SaaS': 0 results
+21:12:40 [INFO] Bing News 'Marketing Manager" "Seed" "AI startup': 3 results
+21:12:45 [INFO] Bing News 'Content Lead" "B2B SaaS': 4 results
+21:12:45 [INFO] Raw extracted: 145, skipped: 196
+21:12:45 [INFO] --- Scoring & Deduplication ---
+21:12:45 [INFO] Dedup: 145 → 118 (27 removed)
+21:12:45 [INFO] --- Saving to SQLite ---
+21:12:45 [INFO] Saved 2 new records
+21:12:45 [INFO] Exported 118 records → data/exports/startup_signal_dump_2026-06-13.csv
+21:12:45 [INFO] ============================================================
+21:12:45 [INFO] Done in 373.0s | Pages: 107 | Companies: 118 | Exported: 118
+21:12:45 [WARNING] Failed (1): https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html
+21:12:45 [WARNING] Blocked (5): https://www.datacenterdynamics.com/en/news/gridcare-raises-64m-in-series-a-funding-round/, https://www.datacenterdynamics.com/en/news/neuromorphic-compute-startup-unconventional-ai-raises-475m-in-seed-funding/, https://www.moneycontrol.com/news/business/funding/deeptech-robotics-startup-armatrix-in-talks-to-raise-15-million-from-crane-venture-partners-13938040.html, https://www.datacenterdynamics.com/en/news/ai-cloud-startup-nava-raises-22m-in-series-a-funding-round/, https://www.finextra.com/newsarticle/47876/egyptian-pos-financing-fintech-blnk-raises-37-million
+21:12:45 [INFO] ============================================================
+[21:12:45] Scraper finished.
+[21:12:45] Export verified: /home/yourmom/getMeMyLeads/data/exports/startup_signal_dump_2026-06-13.csv (118 records)
+[21:12:45] Copied → /home/yourmom/getMeMyLeads/results/startup_signal_dump_2026-06-13.csv
+[main 4017105] Add startup signal dump 2026-06-13
+ 1 file changed, 119 insertions(+)
+ create mode 100644 results/startup_signal_dump_2026-06-13.csv
+[21:12:45] Committed: Add startup signal dump 2026-06-13
+To github.com:jayvakil-bc/getMeMyLeads.git
+   756d7b3..4017105  main -> main
+[21:12:47] Pushed to origin/main.
+[21:12:47] ============================================================
+[21:12:47] Done. 118 records in results/startup_signal_dump_2026-06-13.csv
+[21:12:47] ============================================================

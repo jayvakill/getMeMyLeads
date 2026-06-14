@@ -4,6 +4,8 @@ Autonomous lead generation engine for freelance content and marketing consultant
 
 No API keys required. No sales automation. Output is a scored, deduplicated CSV you open in a spreadsheet.
 
+---
+
 ## How it works
 
 Each run:
@@ -13,17 +15,27 @@ Each run:
 4. Deduplicates by domain and normalized company name
 5. Scores each lead 0–130 (Seed/Series A with content hiring = highest)
 6. Marks each row `priority_tier = High | Low`
-7. Exports a sorted CSV to `data/exports/startup_signal_dump_YYYY-MM-DD.csv`
+7. Exports to `data/exports/startup_signal_dump_YYYY-MM-DD.csv`
+8. Copies to `results/startup_signal_dump_YYYY-MM-DD.csv` and pushes to GitHub
 
-## Quick start
+---
+
+## Quick start (manual run)
 
 ```bash
 cd /home/yourmom/getMeMyLeads
+bash scripts/run_daily.sh
+```
+
+This runs the scraper, writes today's CSV to `results/`, commits it, and pushes to GitHub.
+
+To run the scraper only (no git push):
+
+```bash
 python3 app/main.py
 ```
 
-Output: `data/exports/startup_signal_dump_2026-06-13.csv`
-Log: `data/logs/run_2026-06-13.log`
+---
 
 ## Dependencies
 
@@ -33,75 +45,99 @@ beautifulsoup4>=4.12.0
 lxml>=4.9.0
 ```
 
-Install system-wide (no venv needed, stdlib + these three packages):
+Install system-wide (no venv needed — stdlib + these three packages):
 
 ```bash
 pip install requests beautifulsoup4 lxml
 ```
 
-## Scheduling with cron
+---
 
-Run once daily at 7 AM:
+## Setting up the systemd timer (recommended)
+
+The systemd timer runs `scripts/run_daily.sh` at 7:00 AM every day. If the machine was off at 7 AM, it catches up as soon as it boots (`Persistent=true`).
+
+### Install
+
+```bash
+sudo cp deployment/getmymyleads.service /etc/systemd/system/
+sudo cp deployment/getmymyleads.timer /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable getmymyleads.timer
+sudo systemctl start getmymyleads.timer
+```
+
+### Verify the timer is scheduled
+
+```bash
+systemctl list-timers | grep getmymyleads
+sudo systemctl status getmymyleads.timer
+```
+
+### View logs
+
+```bash
+# Live output from the most recent run
+sudo journalctl -u getmymyleads.service -n 100 --no-pager
+
+# File-based log for today's run
+tail -f data/logs/daily_runner_$(date +%Y-%m-%d).log
+
+# Scraper log (detailed per-source output)
+tail -f data/logs/run_$(date +%Y-%m-%d).log
+```
+
+### Manually trigger the job
+
+```bash
+sudo systemctl start getmymyleads.service
+```
+
+### Stop or disable
+
+```bash
+sudo systemctl disable getmymyleads.timer
+sudo systemctl stop getmymyleads.timer
+```
+
+---
+
+## Scheduling with cron (alternative)
 
 ```bash
 crontab -e
 ```
 
-Add this line:
+Add:
 
 ```
-0 7 * * * cd /home/yourmom/getMeMyLeads && python3 app/main.py >> data/logs/cron.log 2>&1
+0 7 * * * cd /home/yourmom/getMeMyLeads && bash scripts/run_daily.sh >> data/logs/cron.log 2>&1
 ```
 
-### Scheduling with systemd (alternative)
+---
 
-Create `/etc/systemd/system/getmymyleads.service`:
+## Output
 
-```ini
-[Unit]
-Description=getMeMyLeads daily lead scrape
-After=network-online.target
-Wants=network-online.target
+Daily results are committed to:
 
-[Service]
-Type=oneshot
-User=yourmom
-WorkingDirectory=/home/yourmom/getMeMyLeads
-ExecStart=/usr/bin/python3 app/main.py
-StandardOutput=append:/home/yourmom/getMeMyLeads/data/logs/systemd.log
-StandardError=append:/home/yourmom/getMeMyLeads/data/logs/systemd.log
+```
+results/startup_signal_dump_YYYY-MM-DD.csv
 ```
 
-Create `/etc/systemd/system/getmymyleads.timer`:
+Each run produces a new file named by date. Previous files are never overwritten.
 
-```ini
-[Unit]
-Description=Run getMeMyLeads daily at 7 AM
+Internal working files:
 
-[Timer]
-OnCalendar=*-*-* 07:00:00
-Persistent=true
-
-[Install]
-WantedBy=timers.target
+```
+data/exports/startup_signal_dump_YYYY-MM-DD.csv   ← scraper output
+data/logs/run_YYYY-MM-DD.log                       ← scraper log
+data/logs/daily_runner_YYYY-MM-DD.log             ← runner log
+data/startup_signals.db                            ← SQLite (not committed)
 ```
 
-Enable and start:
+---
 
-```bash
-sudo systemctl daemon-reload
-sudo systemctl enable --now getmymyleads.timer
-sudo systemctl status getmymyleads.timer
-```
-
-Check logs:
-
-```bash
-journalctl -u getmymyleads.service -f
-tail -f data/logs/run_$(date +%Y-%m-%d).log
-```
-
-## Output CSV fields
+## CSV fields
 
 | Field | Description |
 |-------|-------------|
@@ -123,6 +159,8 @@ tail -f data/logs/run_$(date +%Y-%m-%d).log
 | `date_found` | Date this record was first scraped |
 | `priority_tier` | `High` (Seed/Series A, score ≥ 70) or `Low` |
 
+---
+
 ## Scoring model
 
 | Signal | Points |
@@ -137,6 +175,8 @@ tail -f data/logs/run_$(date +%Y-%m-%d).log
 | Series B or B+ stage | −10 (likely have in-house teams) |
 
 `High` priority = Seed or Series A AND score ≥ 70. Everything else is `Low`.
+
+---
 
 ## Project structure
 
@@ -158,8 +198,18 @@ config/
   job_titles.txt        — 20 content/marketing role titles
   categories.txt        — B2B tech category taxonomy
 
+scripts/
+  run_daily.sh   — daily runner: scrape → results/ → git commit → push
+
+deployment/
+  getmymyleads.service  — systemd service unit
+  getmymyleads.timer    — systemd timer (7 AM daily)
+
+results/
+  startup_signal_dump_YYYY-MM-DD.csv   ← committed to GitHub daily
+
 data/
-  startup_signals.db    — SQLite (persists across runs)
-  exports/              — daily CSVs
-  logs/                 — daily logs
+  startup_signals.db    — SQLite (not committed)
+  exports/              — internal working copies
+  logs/                 — runner and scraper logs
 ```

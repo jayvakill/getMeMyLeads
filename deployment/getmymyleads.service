@@ -1,0 +1,14 @@
+[Unit]
+Description=getMeMyLeads daily lead scrape and GitHub push
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=yourmom
+WorkingDirectory=/home/yourmom/getMeMyLeads
+ExecStart=/home/yourmom/getMeMyLeads/scripts/run_daily.sh
+StandardOutput=journal
+StandardError=journal
+# Give the scraper up to 20 minutes to complete
+TimeoutStartSec=1200
