@@ -34,13 +34,16 @@ def _load_categories():
     if _CATEGORIES is None:
         path = "config/categories.txt"
         if os.path.exists(path):
+            # Preserve original case from config — categories.txt already has
+            # correct capitalisation (AI, SaaS, HR Tech, etc.). Lowercasing here
+            # was the root cause of "Ai" being stored instead of "AI".
             with open(path) as f:
-                _CATEGORIES = [l.strip().lower() for l in f if l.strip()]
+                _CATEGORIES = [l.strip() for l in f if l.strip()]
         else:
             _CATEGORIES = [
-                'ai', 'saas', 'b2b saas', 'devops', 'cloud', 'cybersecurity',
-                'data', 'analytics', 'automation', 'vertical saas',
-                'infrastructure', 'api', 'fintech', 'healthtech', 'hr tech',
+                'AI', 'SaaS', 'B2B SaaS', 'DevOps', 'Cloud', 'Cybersecurity',
+                'Data', 'Analytics', 'Automation', 'Vertical SaaS',
+                'Infrastructure', 'API', 'Fintech', 'Healthtech', 'HR Tech',
             ]
     return _CATEGORIES
 
@@ -100,9 +103,11 @@ def classify_category(text):
             if kw in text_lower:
                 return cat
 
+    # Match against text_lower but return the category in its original case
+    # from the config file (avoids "Ai", "Api", "B2B Saas", etc.)
     for cat in categories:
-        if cat in text_lower:
-            return cat.title()
+        if cat.lower() in text_lower:
+            return cat
 
     return ''
 

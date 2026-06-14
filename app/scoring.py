@@ -1,8 +1,10 @@
-# Max possible score is 130. Leads scoring 80+ are considered high-priority.
+# Max possible score is 130. Leads scoring 70+ on Seed/Series A = High priority.
 # The weights reflect that "hiring_and_funding" together is the strongest signal —
 # it means the company just raised and is actively building out their marketing team.
-SEED_STAGES = {'seed', 'pre-seed'}
+SEED_STAGES = {'seed'}
 SERIES_A_STAGES = {'series a'}
+PRE_SEED_STAGES = {'pre-seed'}          # too early — often pre-revenue, no content budget
+LATE_STAGES = {'series b', 'series b+'} # established enough to have in-house teams
 CONTENT_HIRING_TITLES = {
     'content marketer', 'head of content', 'content lead', 'social media manager',
     'videographer', 'video editor', 'creative strategist', 'growth marketer',
@@ -29,10 +31,15 @@ def score_company(data):
     funding_date = data.get('funding_date') or ''
     person_name = data.get('relevant_person_name') or ''
 
-    # Early-stage companies are the best fit — they're growing fast and haven't
-    # yet built out a content function. Series B+ often have in-house teams.
+    # Seed and Series A are the sweet spot: funded, growing, no content team yet.
+    # Pre-Seed gets a small bonus — real signal but typically pre-revenue.
+    # Series B/B+ get a penalty — they usually have in-house marketing already.
     if stage in SEED_STAGES or stage in SERIES_A_STAGES:
         score += 30
+    elif stage in PRE_SEED_STAGES:
+        score += 10
+    elif stage in LATE_STAGES:
+        score -= 10
 
     # Funding presence (even just a date) confirms a real round was announced,
     # not just a rumor or a job posting from an underfunded company.
