@@ -1,0 +1,183 @@
+19:54:33 [ERROR] TechCrunch RSS: not well-formed (invalid token): line 1, column 0
+19:54:41 [INFO] DDG '"raises Seed round" "AI startup"': 0 results
+20:00:33 [INFO] ============================================================
+20:00:33 [INFO] Daily run started: 2026-06-13
+20:00:33 [INFO] ============================================================
+20:00:33 [INFO] Loaded 18 funding queries, 16 hiring queries, 20 job titles
+20:00:33 [INFO] --- Source: TechCrunch RSS ---
+20:00:35 [INFO] TechCrunch RSS: 2 funding items
+20:00:42 [INFO] --- Source: Bing News RSS (funding) ---
+20:00:47 [INFO] Bing News 'raises Seed round" "AI startup': 6 results
+20:01:11 [INFO] Bing News 'raises Series A" "B2B SaaS': 3 results
+20:01:27 [INFO] Bing News 'announces Seed funding" "SaaS': 3 results
+20:01:41 [INFO] Bing News 'raises Series A" "cybersecurity startup': 5 results
+20:01:59 [INFO] Bing News 'raises Seed funding" "DevOps': 5 results
+20:02:21 [INFO] Bing News 'raises Series A" "data platform': 6 results
+20:02:37 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/gridcare-raises-64m-in-series-a-fundi
+20:02:40 [INFO] Bing News 'AI startup raises Seed funding': 6 results
+20:02:49 [WARNING] Blocked (403): https://www.moneycontrol.com/news/business/startup/icertis-veterans-enterprise-a
+20:03:05 [INFO] Bing News 'B2B SaaS startup raises Series A': 0 results
+20:03:09 [INFO] Bing News 'automation startup raises seed funding': 6 results
+20:03:24 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/neuromorphic-compute-startup-unconven
+20:03:33 [INFO] Bing News 'cloud startup raises Series A': 4 results
+20:03:42 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/ai-cloud-startup-nava-raises-22m-in-s
+20:03:48 [INFO] Bing News 'raises Seed" "fintech': 6 results
+20:03:56 [ERROR] Failed https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html: 404 Client Error: Not Found for url: https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html
+20:04:15 [INFO] Bing News 'raises Series A" "healthtech': 3 results
+20:04:31 [INFO] Bing News 'raises Seed" "HR tech': 1 results
+20:04:38 [INFO] Bing News 'raises Series A" "infrastructure': 4 results
+20:04:53 [INFO] Bing News 'raises Seed funding" "vertical SaaS': 3 results
+20:05:06 [INFO] Bing News 'raises Series A" "API': 0 results
+20:05:11 [INFO] Bing News 'raises Seed" "analytics platform': 3 results
+20:05:19 [INFO] Bing News 'raises Series A" "developer tools': 1 results
+20:05:22 [INFO] --- Source: YC Work at a Startup ---
+20:05:26 [INFO] YC Jobs 'Content Marketer': 22 listings
+20:05:29 [INFO] YC Jobs 'Head of Content': 24 listings
+20:05:31 [INFO] YC Jobs 'Content Lead': 28 listings
+20:05:33 [INFO] YC Jobs 'Social Media Manager': 28 listings
+20:22:29 [INFO] ============================================================
+20:22:29 [INFO] Daily run started: 2026-06-13
+20:22:29 [INFO] ============================================================
+20:22:29 [INFO] Loaded 18 funding queries, 16 hiring queries, 20 job titles
+20:22:29 [INFO] --- Source: TechCrunch RSS ---
+20:22:30 [INFO] TechCrunch RSS: 2 funding items
+20:22:37 [INFO] --- Source: Bing News RSS (funding) ---
+20:22:40 [INFO] Bing News 'raises Seed round" "AI startup': 6 results
+20:22:42 [WARNING] Blocked (403): https://www.moneycontrol.com/news/business/startup/icertis-veterans-enterprise-a
+20:23:08 [INFO] Bing News 'raises Series A" "B2B SaaS': 3 results
+20:23:22 [INFO] Bing News 'announces Seed funding" "SaaS': 3 results
+20:23:37 [INFO] Bing News 'raises Series A" "cybersecurity startup': 4 results
+20:23:54 [INFO] Bing News 'raises Seed funding" "DevOps': 5 results
+20:24:15 [INFO] Bing News 'raises Series A" "data platform': 6 results
+20:24:33 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/gridcare-raises-64m-in-series-a-fundi
+20:24:36 [INFO] Bing News 'AI startup raises Seed funding': 6 results
+20:25:00 [INFO] Bing News 'B2B SaaS startup raises Series A': 0 results
+20:25:06 [INFO] Bing News 'automation startup raises seed funding': 6 results
+20:25:19 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/neuromorphic-compute-startup-unconven
+20:25:28 [INFO] Bing News 'cloud startup raises Series A': 4 results
+20:25:35 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/ai-cloud-startup-nava-raises-22m-in-s
+20:25:42 [INFO] Bing News 'raises Seed" "fintech': 6 results
+20:25:49 [ERROR] Failed https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html: 404 Client Error: Not Found for url: https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html
+20:25:51 [WARNING] Blocked (403): https://africabusinesscommunities.com/startups/egypts-blnk-raises-37.1m-to-scale
+20:26:03 [INFO] Bing News 'raises Series A" "healthtech': 3 results
+20:26:17 [INFO] Bing News 'raises Seed" "HR tech': 1 results
+20:26:24 [INFO] Bing News 'raises Series A" "infrastructure': 4 results
+20:26:41 [INFO] Bing News 'raises Seed funding" "vertical SaaS': 3 results
+20:26:51 [INFO] Bing News 'raises Series A" "API': 0 results
+20:26:54 [INFO] Bing News 'raises Seed" "analytics platform': 3 results
+20:27:08 [INFO] Bing News 'raises Series A" "developer tools': 1 results
+20:27:10 [INFO] --- Source: YC Work at a Startup ---
+20:27:13 [INFO] YC Jobs 'Content Marketer': 22 listings
+20:27:15 [INFO] YC Jobs 'Head of Content': 24 listings
+20:27:18 [INFO] YC Jobs 'Content Lead': 28 listings
+20:27:20 [INFO] YC Jobs 'Social Media Manager': 28 listings
+20:27:24 [INFO] YC Jobs 'Videographer': 29 listings
+20:27:26 [INFO] YC Jobs 'Video Editor': 24 listings
+20:27:29 [INFO] YC Jobs 'Creative Strategist': 26 listings
+20:27:31 [INFO] YC Jobs 'Growth Marketer': 26 listings
+20:27:34 [INFO] YC Jobs 'VP Growth': 24 listings
+20:27:37 [INFO] YC Jobs 'Demand Gen Manager': 25 listings
+20:27:39 [INFO] YC Jobs 'Marketing Manager': 24 listings
+20:27:42 [INFO] YC Jobs 'Head of Marketing': 22 listings
+20:27:45 [INFO] YC Jobs 'CMO': 25 listings
+20:27:48 [INFO] YC Jobs 'Brand Marketing': 22 listings
+20:27:50 [INFO] YC Jobs 'Founder Brand': 25 listings
+20:27:52 [INFO] YC Jobs 'Content Marketing Manager': 24 listings
+20:27:54 [INFO] YC Jobs 'Director of Content': 27 listings
+20:27:56 [INFO] YC Jobs 'Digital Marketing Manager': 25 listings
+20:27:56 [INFO] --- Source: HN Jobs ---
+20:27:59 [INFO] HN Jobs: 30 listings
+20:27:59 [INFO] --- Source: Remote OK ---
+20:28:01 [INFO] Remote OK: 100 total jobs
+20:28:01 [INFO] --- Source: Bing News RSS (hiring) ---
+20:28:05 [INFO] Bing News 'Content Marketer" "Seed" "SaaS': 4 results
+20:28:08 [INFO] Bing News 'Head of Content" "Series A" "AI startup': 1 results
+20:28:12 [INFO] Bing News 'Videographer" "SaaS startup': 0 results
+20:28:18 [INFO] Bing News 'Growth Marketer" "B2B SaaS': 4 results
+20:28:22 [INFO] Bing News 'Creative Strategist" "startup': 1 results
+20:28:26 [INFO] Bing News 'Demand Gen Manager" "Series A" "SaaS': 0 results
+20:28:29 [INFO] Bing News 'Marketing Manager" "Seed" "AI startup': 3 results
+20:28:34 [INFO] Bing News 'Content Lead" "B2B SaaS': 4 results
+20:28:34 [INFO] Raw extracted: 145, skipped: 196
+20:28:34 [INFO] --- Scoring & Deduplication ---
+20:28:34 [INFO] Dedup: 145 → 118 (27 removed)
+20:28:34 [INFO] --- Saving to SQLite ---
+20:28:35 [INFO] Saved 118 new records
+20:28:35 [INFO] Exported 118 records → data/exports/startup_signal_dump_2026-06-13.csv
+20:28:35 [INFO] ============================================================
+20:28:35 [INFO] Done in 366.1s | Pages: 107 | Companies: 118 | Exported: 118
+20:28:35 [WARNING] Failed (1): https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html
+20:28:35 [WARNING] Blocked (5): https://www.moneycontrol.com/news/business/startup/icertis-veterans-enterprise-ai-startup-rivvun-raises-7-55-million-seed-round-led-by-sitara-capital-3one4-13946355.html, https://www.datacenterdynamics.com/en/news/gridcare-raises-64m-in-series-a-funding-round/, https://www.datacenterdynamics.com/en/news/neuromorphic-compute-startup-unconventional-ai-raises-475m-in-seed-funding/, https://www.datacenterdynamics.com/en/news/ai-cloud-startup-nava-raises-22m-in-series-a-funding-round/, https://africabusinesscommunities.com/startups/egypts-blnk-raises-37.1m-to-scale-point-of-sale-lending-for-the-underbanked/
+20:28:35 [INFO] ============================================================
+20:37:31 [INFO] ============================================================
+20:37:31 [INFO] Daily run started: 2026-06-13
+20:37:31 [INFO] ============================================================
+20:37:31 [INFO] Loaded 18 funding queries, 16 hiring queries, 20 job titles
+20:37:31 [INFO] --- Source: TechCrunch RSS ---
+20:37:32 [INFO] TechCrunch RSS: 2 funding items
+20:37:37 [INFO] --- Source: Bing News RSS (funding) ---
+20:37:41 [INFO] Bing News 'raises Seed round" "AI startup': 6 results
+20:38:04 [INFO] Bing News 'raises Series A" "B2B SaaS': 3 results
+20:38:19 [INFO] Bing News 'announces Seed funding" "SaaS': 3 results
+20:38:33 [INFO] Bing News 'raises Series A" "cybersecurity startup': 4 results
+20:38:52 [INFO] Bing News 'raises Seed funding" "DevOps': 5 results
+20:39:13 [INFO] Bing News 'raises Series A" "data platform': 6 results
+20:39:32 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/gridcare-raises-64m-in-series-a-fundi
+20:39:35 [INFO] Bing News 'AI startup raises Seed funding': 6 results
+20:39:57 [INFO] Bing News 'B2B SaaS startup raises Series A': 0 results
+20:40:02 [INFO] Bing News 'automation startup raises seed funding': 6 results
+20:40:19 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/neuromorphic-compute-startup-unconven
+20:40:28 [INFO] Bing News 'cloud startup raises Series A': 4 results
+20:40:38 [WARNING] Blocked (403): https://www.datacenterdynamics.com/en/news/ai-cloud-startup-nava-raises-22m-in-s
+20:40:46 [INFO] Bing News 'raises Seed" "fintech': 6 results
+20:40:54 [ERROR] Failed https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html: 404 Client Error: Not Found for url: https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html
+20:41:13 [INFO] Bing News 'raises Series A" "healthtech': 3 results
+20:41:27 [INFO] Bing News 'raises Seed" "HR tech': 1 results
+20:41:32 [INFO] Bing News 'raises Series A" "infrastructure': 4 results
+20:41:47 [INFO] Bing News 'raises Seed funding" "vertical SaaS': 3 results
+20:42:00 [INFO] Bing News 'raises Series A" "API': 0 results
+20:42:04 [INFO] Bing News 'raises Seed" "analytics platform': 2 results
+20:42:16 [INFO] Bing News 'raises Series A" "developer tools': 1 results
+20:42:20 [INFO] --- Source: YC Work at a Startup ---
+20:42:23 [INFO] YC Jobs 'Content Marketer': 22 listings
+20:42:25 [INFO] YC Jobs 'Head of Content': 24 listings
+20:42:28 [INFO] YC Jobs 'Content Lead': 28 listings
+20:42:30 [INFO] YC Jobs 'Social Media Manager': 28 listings
+20:42:32 [INFO] YC Jobs 'Videographer': 29 listings
+20:42:35 [INFO] YC Jobs 'Video Editor': 24 listings
+20:42:36 [INFO] YC Jobs 'Creative Strategist': 26 listings
+20:42:39 [INFO] YC Jobs 'Growth Marketer': 26 listings
+20:42:40 [INFO] YC Jobs 'VP Growth': 24 listings
+20:42:42 [INFO] YC Jobs 'Demand Gen Manager': 25 listings
+20:42:44 [INFO] YC Jobs 'Marketing Manager': 24 listings
+20:42:46 [INFO] YC Jobs 'Head of Marketing': 22 listings
+20:42:49 [INFO] YC Jobs 'CMO': 25 listings
+20:42:50 [INFO] YC Jobs 'Brand Marketing': 22 listings
+20:42:51 [INFO] YC Jobs 'Founder Brand': 25 listings
+20:42:55 [INFO] YC Jobs 'Content Marketing Manager': 24 listings
+20:42:58 [INFO] YC Jobs 'Director of Content': 27 listings
+20:43:00 [INFO] YC Jobs 'Digital Marketing Manager': 25 listings
+20:43:00 [INFO] --- Source: HN Jobs ---
+20:43:03 [INFO] HN Jobs: 30 listings
+20:43:03 [INFO] --- Source: Remote OK ---
+20:43:05 [INFO] Remote OK: 100 total jobs
+20:43:05 [INFO] --- Source: Bing News RSS (hiring) ---
+20:43:09 [INFO] Bing News 'Content Marketer" "Seed" "SaaS': 4 results
+20:43:14 [INFO] Bing News 'Head of Content" "Series A" "AI startup': 1 results
+20:43:19 [INFO] Bing News 'Videographer" "SaaS startup': 0 results
+20:43:23 [INFO] Bing News 'Growth Marketer" "B2B SaaS': 4 results
+20:43:27 [INFO] Bing News 'Creative Strategist" "startup': 1 results
+20:43:30 [INFO] Bing News 'Demand Gen Manager" "Series A" "SaaS': 0 results
+20:43:33 [INFO] Bing News 'Marketing Manager" "Seed" "AI startup': 3 results
+20:43:35 [INFO] Bing News 'Content Lead" "B2B SaaS': 4 results
+20:43:35 [INFO] Raw extracted: 143, skipped: 197
+20:43:35 [INFO] --- Scoring & Deduplication ---
+20:43:35 [INFO] Dedup: 143 → 116 (27 removed)
+20:43:35 [INFO] --- Saving to SQLite ---
+20:43:36 [INFO] Saved 116 new records
+20:43:36 [INFO] Exported 116 records → data/exports/startup_signal_dump_2026-06-13.csv
+20:43:36 [INFO] ============================================================
+20:43:36 [INFO] Done in 365.4s | Pages: 108 | Companies: 116 | Exported: 116
+20:43:36 [WARNING] Failed (1): https://finance.yahoo.com/news/agentsmyth-raises-8-7m-seed-130700851.html
+20:43:36 [WARNING] Blocked (3): https://www.datacenterdynamics.com/en/news/gridcare-raises-64m-in-series-a-funding-round/, https://www.datacenterdynamics.com/en/news/neuromorphic-compute-startup-unconventional-ai-raises-475m-in-seed-funding/, https://www.datacenterdynamics.com/en/news/ai-cloud-startup-nava-raises-22m-in-series-a-funding-round/
+20:43:36 [INFO] ============================================================
